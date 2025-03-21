@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Programa {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+       float kilowatt = 0.78f;
+
+        System.out.println("Digite a quantidade de kilowatt consumida: ");
+        float consumo_kWh = scan.nextFloat();
+
+        float valor_consumido = consumo_kWh * kilowatt;
+        if (consumo_kWh <=150) {
+            float desconto = valor_consumido * 0.10f;
+            float ValorDesconto = valor_consumido - desconto;
+            System.out.printf("Você recebeu desconto, o valor final foi de: " + ValorDesconto);
+        } else{
+            System.out.printf("O valor total foi de: " + valor_consumido);
+        }
+
+    }
+}
